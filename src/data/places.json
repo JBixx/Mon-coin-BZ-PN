@@ -1,0 +1,65 @@
+[
+  {
+    "id": "basilique-sainte-anne",
+    "name": "Basilique Sainte-Anne du Congo",
+    "city": "brazzaville",
+    "category": "culture",
+    "neighborhood": "Poto-Poto",
+    "description": "Basilique emblématique de Brazzaville, reconnaissable à son toit de tuiles vertes.",
+    "tags": ["architecture", "patrimoine"]
+  },
+  {
+    "id": "memorial-savorgnan-de-brazza",
+    "name": "Mémorial Pierre Savorgnan de Brazza",
+    "city": "brazzaville",
+    "category": "culture",
+    "neighborhood": "Centre-ville",
+    "description": "Mémorial et musée consacré à l'histoire de la fondation de la ville.",
+    "tags": ["musée", "histoire"]
+  },
+  {
+    "id": "rapides-du-djoue",
+    "name": "Les Rapides du Congo",
+    "city": "brazzaville",
+    "category": "nature",
+    "neighborhood": "Djoué",
+    "description": "Rapides spectaculaires du fleuve Congo, un spot apprécié pour les balades et le coucher de soleil.",
+    "tags": ["fleuve", "coucher de soleil"]
+  },
+  {
+    "id": "marche-total",
+    "name": "Marché Total",
+    "city": "brazzaville",
+    "category": "marche",
+    "neighborhood": "Bacongo",
+    "description": "L'un des marchés les plus animés de Brazzaville.",
+    "tags": ["shopping", "ambiance"]
+  },
+  {
+    "id": "cote-sauvage",
+    "name": "Côte Sauvage",
+    "city": "pointe-noire",
+    "category": "plage",
+    "neighborhood": "Côte Sauvage",
+    "description": "Longue plage face à l'Atlantique, idéale pour se promener en fin de journée.",
+    "tags": ["océan", "balade"]
+  },
+  {
+    "id": "gare-cfco-pointe-noire",
+    "name": "Gare de Pointe-Noire (CFCO)",
+    "city": "pointe-noire",
+    "category": "culture",
+    "neighborhood": "Centre-ville",
+    "description": "Gare historique du Chemin de fer Congo-Océan, au style architectural colonial.",
+    "tags": ["architecture", "histoire"]
+  },
+  {
+    "id": "gorges-de-diosso",
+    "name": "Gorges de Diosso",
+    "city": "pointe-noire",
+    "category": "nature",
+    "neighborhood": "Diosso (environs)",
+    "description": "Cirque naturel aux falaises rouges, à une courte distance de Pointe-Noire.",
+    "tags": ["paysage", "excursion"]
+  }
+]
