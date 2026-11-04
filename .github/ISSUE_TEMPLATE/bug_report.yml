@@ -1,0 +1,74 @@
+name: 🐛 Rapport de bug
+description: Signaler un comportement inattendu de l'API
+title: '[Bug] '
+labels: ['bug', 'à trier']
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Merci de prendre le temps de signaler un bug !
+        ⚠️ Pour une **faille de sécurité**, n'utilisez pas ce formulaire : suivez la [politique de sécurité](https://github.com/JBixx/Mon-coin-BZ-PN/security/policy).
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: Décrivez clairement le problème.
+      placeholder: La route GET /api/v1/places renvoie une erreur 500 quand…
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Étapes pour reproduire
+      description: Requête exacte (curl, Postman…) ou étapes à suivre.
+      placeholder: |
+        1. Lancer `npm run dev`
+        2. Exécuter `curl "http://localhost:3000/api/v1/places?..."`
+        3. Observer l'erreur
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Comportement attendu
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Comportement observé
+      description: Réponse obtenue, code HTTP, logs ou message d'erreur.
+      render: shell
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Version / commit
+      placeholder: ex. 0.1.0 ou abc1234
+  - type: input
+    id: node
+    attributes:
+      label: Version de Node.js
+      description: Résultat de `node -v`
+      placeholder: v22.x.x
+    validations:
+      required: true
+  - type: dropdown
+    id: os
+    attributes:
+      label: Système d'exploitation
+      options:
+        - Windows
+        - macOS
+        - Linux
+        - Autre
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Vérifications
+      options:
+        - label: J'ai vérifié qu'aucune issue similaire n'existe déjà.
+          required: true
+        - label: J'accepte de respecter le [Code de conduite](https://github.com/JBixx/Mon-coin-BZ-PN/blob/main/.github/CODE_OF_CONDUCT.md).
+          required: true

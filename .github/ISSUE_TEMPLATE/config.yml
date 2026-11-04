@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: 🔒 Signaler une faille de sécurité
+    url: https://github.com/JBixx/Mon-coin-BZ-PN/security/advisories/new
+    about: Signalez les vulnérabilités en privé, jamais dans une issue publique.
+  - name: 📖 Guide de contribution
+    url: https://github.com/JBixx/Mon-coin-BZ-PN/blob/main/.github/CONTRIBUTING.md
+    about: Comment installer le projet, lancer les tests et proposer une PR.

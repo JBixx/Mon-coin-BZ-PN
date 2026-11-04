@@ -11,11 +11,8 @@ let places = seed.map((p) => ({
   updatedAt: new Date().toISOString(),
 }));
 
-const normalize = (s) =>
-  String(s)
-    .normalize('NFD')
-    .replace(/[̀-ͯ]/g, '')
-    .toLowerCase();
+// Minuscules + suppression des accents (é -> e) pour une recherche tolérante
+const normalize = (s) => String(s).normalize('NFD').replace(/\p{M}/gu, '').toLowerCase();
 
 export function findAll({ city, category, q, tag } = {}) {
   return places.filter((p) => {
@@ -23,7 +20,9 @@ export function findAll({ city, category, q, tag } = {}) {
     if (category && p.category !== category) return false;
     if (tag && !(p.tags || []).some((t) => normalize(t) === normalize(tag))) return false;
     if (q) {
-      const haystack = normalize([p.name, p.description, p.neighborhood, ...(p.tags || [])].join(' '));
+      const haystack = normalize(
+        [p.name, p.description, p.neighborhood, ...(p.tags || [])].join(' '),
+      );
       if (!haystack.includes(normalize(q))) return false;
     }
     return true;
