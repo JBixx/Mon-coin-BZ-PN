@@ -90,8 +90,6 @@ Chaque Pull Request et chaque push sur `main` déclenchent le workflow [CI](.git
 | **Tests**         | Tests sur Node 22 et 24, seuils de couverture, rapport envoyé à Codecov  |
 | **Build Check**   | Audit des dépendances de production, démarrage réel de l'API, paquet npm |
 
-Dependabot propose aussi chaque semaine les mises à jour des dépendances.
-
 ## Endpoints
 
 Base URL : `/api/v1`

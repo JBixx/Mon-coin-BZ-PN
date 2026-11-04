@@ -47,7 +47,7 @@ Merci de :
 
 ## Hors périmètre
 
-- Les vulnérabilités dans des dépendances tierces déjà publiquement connues et pour lesquelles une mise à jour est en attente (Dependabot les suit automatiquement)
+- Les vulnérabilités dans des dépendances tierces déjà publiquement connues et pour lesquelles une mise à jour est en attente
 - L'absence d'authentification sur les routes d'écriture : il s'agit d'une limitation connue, inscrite dans la [roadmap](../README.md#roadmap)
 
 Merci de contribuer à la sécurité de Mon coin BZ-PN ! 🔒
