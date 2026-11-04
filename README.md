@@ -28,12 +28,12 @@ Le projet est communautaire : **chacun peut proposer ses coins** via une Pull Re
 
 ## Fonctionnalités
 
-- 📍 Liste des lieux de Brazzaville et Pointe-Noire
-- 🔎 Filtres par ville, catégorie, tag et recherche plein texte (insensible aux accents)
-- 📄 Pagination
-- ✍️ CRUD complet (création, modification, suppression)
-- ✅ Validation des données avec [Zod](https://zod.dev)
-- 🛡️ En-têtes de sécurité (Helmet) et CORS activé
+- Liste des lieux de Brazzaville et Pointe-Noire
+- Filtres par ville, catégorie, tag et recherche plein texte (insensible aux accents)
+- Pagination
+- CRUD complet (création, modification, suppression)
+- Validation des données avec [Zod](https://zod.dev)
+- En-têtes de sécurité (Helmet) et CORS activé
 
 ## Stack technique
 
