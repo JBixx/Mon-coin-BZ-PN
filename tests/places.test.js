@@ -58,3 +58,37 @@ test('POST /api/v1/places valide les données', async () => {
   assert.equal(res.status, 400);
   assert.ok(res.body.details.length > 0);
 });
+
+test('la recherche ignore la casse et les accents', async () => {
+  const res = await request(app).get('/api/v1/places?q=MÉMORIAL');
+  assert.equal(res.status, 200);
+  assert.equal(res.body.data[0].id, 'memorial-savorgnan-de-brazza');
+});
+
+test('GET /api/v1/places?category=culture&tag=histoire combine les filtres', async () => {
+  const res = await request(app).get('/api/v1/places?category=culture&tag=Histoire');
+  assert.equal(res.status, 200);
+  assert.ok(res.body.data.length > 0);
+  assert.ok(res.body.data.every((p) => p.category === 'culture' && p.tags.includes('histoire')));
+});
+
+test('la pagination découpe les résultats', async () => {
+  const res = await request(app).get('/api/v1/places?limit=2&page=2');
+  assert.equal(res.status, 200);
+  assert.equal(res.body.data.length, 2);
+  assert.equal(res.body.meta.page, 2);
+  assert.equal(res.body.meta.pages, Math.ceil(res.body.meta.total / 2));
+});
+
+test('GET /api/v1/places/:id renvoie un lieu existant', async () => {
+  const res = await request(app).get('/api/v1/places/cote-sauvage');
+  assert.equal(res.status, 200);
+  assert.equal(res.body.data.city, 'pointe-noire');
+});
+
+test('PATCH et DELETE sur un lieu inexistant renvoient 404', async () => {
+  const patch = await request(app).patch('/api/v1/places/inconnu').send({ name: 'Nouveau nom' });
+  assert.equal(patch.status, 404);
+  const del = await request(app).delete('/api/v1/places/inconnu');
+  assert.equal(del.status, 404);
+});

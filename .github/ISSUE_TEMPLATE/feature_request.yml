@@ -1,0 +1,54 @@
+name: ✨ Demande de fonctionnalité
+description: Proposer une nouvelle fonctionnalité ou une amélioration
+title: '[Feature] '
+labels: ['enhancement', 'à trier']
+body:
+  - type: markdown
+    attributes:
+      value: Merci pour votre idée ! Plus elle est détaillée, plus elle sera facile à évaluer.
+  - type: textarea
+    id: problem
+    attributes:
+      label: Quel problème cette fonctionnalité résout-elle ?
+      placeholder: Aujourd'hui, je ne peux pas trouver les lieux proches de ma position…
+    validations:
+      required: true
+  - type: textarea
+    id: solution
+    attributes:
+      label: Solution proposée
+      description: Décrivez ce que vous aimeriez voir (nouvelle route, paramètre, champ…).
+      placeholder: |
+        Ajouter un paramètre `near=lat,lng&radius=2km` sur GET /api/v1/places
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives envisagées
+      description: D'autres solutions ou contournements possibles.
+  - type: dropdown
+    id: area
+    attributes:
+      label: Domaine concerné
+      options:
+        - API / routes
+        - Données (lieux, catégories, villes)
+        - Documentation
+        - Outillage / CI
+        - Autre
+    validations:
+      required: true
+  - type: checkboxes
+    id: contribution
+    attributes:
+      label: Contribution
+      options:
+        - label: Je suis prêt(e) à proposer une Pull Request pour cette fonctionnalité.
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Vérifications
+      options:
+        - label: J'ai vérifié que cette idée n'a pas déjà été proposée (issues et roadmap du README).
+          required: true

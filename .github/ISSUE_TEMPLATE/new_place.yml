@@ -1,0 +1,68 @@
+name: 📍 Proposer un lieu
+description: Suggérer un coin de Brazzaville ou Pointe-Noire à ajouter (sans écrire de code)
+title: '[Lieu] '
+labels: ['data', 'à trier']
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Vous connaissez un bon coin ? Partagez-le ! Un contributeur l'ajoutera à `places.json`.
+        Pas de publicité ni de données personnelles, merci.
+  - type: input
+    id: name
+    attributes:
+      label: Nom du lieu
+      placeholder: ex. Chez Mama Ngouabi
+    validations:
+      required: true
+  - type: dropdown
+    id: city
+    attributes:
+      label: Ville
+      options:
+        - Brazzaville
+        - Pointe-Noire
+    validations:
+      required: true
+  - type: dropdown
+    id: category
+    attributes:
+      label: Catégorie
+      options:
+        - Restaurant
+        - Maquis / Nganda
+        - Bar / Lounge
+        - Hôtel
+        - Plage
+        - Nature
+        - Culture / Patrimoine
+        - Marché
+        - Loisirs
+    validations:
+      required: true
+  - type: input
+    id: neighborhood
+    attributes:
+      label: Quartier / arrondissement
+      placeholder: ex. Poto-Poto, Bacongo, Tié-Tié…
+  - type: textarea
+    id: description
+    attributes:
+      label: Pourquoi c'est un bon coin ?
+      description: Une ou deux phrases.
+    validations:
+      required: true
+  - type: input
+    id: source
+    attributes:
+      label: Lien ou source (optionnel)
+      description: Page officielle, Google Maps, etc. pour vérifier les informations.
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Vérifications
+      options:
+        - label: Le lieu existe et les informations sont exactes à ma connaissance.
+          required: true
+        - label: Ce lieu n'est pas déjà présent dans l'API.
+          required: true
