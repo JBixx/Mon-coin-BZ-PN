@@ -29,7 +29,7 @@
   },
   "homepage": "https://github.com/JBixx/Mon-coin-BZ-PN#readme",
   "engines": {
-    "node": ">=20"
+    "node": ">=22"
   },
   "dependencies": {
     "cors": "^2.8.6",

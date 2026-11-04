@@ -4,7 +4,7 @@
 
 [![CI](https://github.com/JBixx/Mon-coin-BZ-PN/actions/workflows/ci.yml/badge.svg)](https://github.com/JBixx/Mon-coin-BZ-PN/actions/workflows/ci.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
-![Node.js](https://img.shields.io/badge/Node.js-%3E%3D20-339933?logo=node.js&logoColor=white)
+![Node.js](https://img.shields.io/badge/Node.js-%3E%3D22-339933?logo=node.js&logoColor=white)
 ![Express](https://img.shields.io/badge/Express-5-000000?logo=express)
 [![PRs Welcome](https://img.shields.io/badge/PRs-bienvenues-brightgreen.svg)](CONTRIBUTING.md)
 
@@ -39,7 +39,7 @@ Le projet est communautaire : **chacun peut proposer ses coins** via une Pull Re
 
 | Outil | Rôle |
 | --- | --- |
-| [Node.js](https://nodejs.org) ≥ 20 | Runtime |
+| [Node.js](https://nodejs.org) ≥ 22 | Runtime |
 | [Express 5](https://expressjs.com) | Framework HTTP |
 | [Zod](https://zod.dev) | Validation |
 | [Helmet](https://helmetjs.github.io) / [CORS](https://github.com/expressjs/cors) / [Morgan](https://github.com/expressjs/morgan) | Sécurité, CORS, logs |
