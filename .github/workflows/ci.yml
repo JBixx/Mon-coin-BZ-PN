@@ -48,7 +48,7 @@ jobs:
         run: npm run test:coverage
       - name: Envoi de la couverture à Codecov
         if: matrix.node-version == 22
-        uses: codecov/codecov-action@v5
+        uses: codecov/codecov-action@v7
         with:
           files: coverage/lcov.info
           token: ${{ secrets.CODECOV_TOKEN }}
